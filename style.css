@@ -133,3 +133,6 @@ html{scroll-padding-top:70px}
 #involved form.inline{flex-direction:column;gap:12px;margin-top:6px}
 #involved form.inline input{width:100%;flex:none;box-sizing:border-box}
 #involved form.inline .btn{width:100%;text-align:center}
+
+.tier{cursor:pointer}.tier.feat{box-shadow:0 10px 30px rgba(30,60,40,.12)}.tier:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+.tiernote{margin-top:8px;color:#55554a;font-size:15px}

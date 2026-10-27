@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=3">
+<link rel="stylesheet" href="style.css?v=4">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"Evergreen Commons (placeholder)","description":"Community environmental nonprofit"}</script>
 </head>
 <body>
@@ -139,18 +139,19 @@
   <h2>Partner with us for a greener community.</h2>
   <p class="lede">Sponsors fund projects and put their teams to work outdoors. Every tier includes impact reporting you can share with employees and customers. (Sample tiers.)</p>
   <div class="tiers">
-    <div class="tier"><h3>Seedling</h3><p class="price">$1,000 <small>/ year</small></p><ul><li>Logo on our website</li><li>Annual impact report</li><li>Social media thank you</li></ul></div>
-    <div class="tier feat"><h3>Canopy</h3><p class="price">$5,000 <small>/ year</small></p><ul><li>Everything in Seedling</li><li>One private team volunteer day</li><li>Logo on event signage</li><li>Quarterly project updates</li></ul></div>
-    <div class="tier"><h3>Watershed</h3><p class="price">$15,000 <small>/ year</small></p><ul><li>Everything in Canopy</li><li>Named project sponsorship</li><li>Two team volunteer days</li><li>Custom ESG impact metrics</li></ul></div>
+    <div class="tier" data-tier="Seedling" role="button" tabindex="0"><h3>Seedling</h3><p class="price">$1,000 <small>/ year</small></p><ul><li>Logo on our website</li><li>Annual impact report</li><li>Social media thank you</li></ul></div>
+    <div class="tier feat" data-tier="Canopy" role="button" tabindex="0"><h3>Canopy</h3><p class="price">$5,000 <small>/ year</small></p><ul><li>Everything in Seedling</li><li>One private team volunteer day</li><li>Logo on event signage</li><li>Quarterly project updates</li></ul></div>
+    <div class="tier" data-tier="Watershed" role="button" tabindex="0"><h3>Watershed</h3><p class="price">$15,000 <small>/ year</small></p><ul><li>Everything in Canopy</li><li>Named project sponsorship</li><li>Two team volunteer days</li><li>Custom ESG impact metrics</li></ul></div>
   </div>
   <h3>Sponsorship inquiry</h3>
+  <p class="tiernote" id="tierNote"></p>
   <form class="inq" data-demo style="margin-top:18px">
     <label>Name<input required></label>
     <label>Company<input required></label>
     <label>Work email<input type="email" required></label>
-    <label>Interested tier<select><option>Seedling</option><option selected>Canopy</option><option>Watershed</option><option>Not sure yet</option></select></label>
-    <label class="full">Message<textarea rows="4" placeholder="Tell us about your goals"></textarea></label>
-    <div class="full"><button class="btn green" type="submit">Send inquiry</button><p class="thanks">Thanks! (Demo form: nothing was sent.)</p></div>
+    <label>Interested tier<select id="tierSel"><option>Seedling</option><option selected>Canopy</option><option>Watershed</option><option>Not sure yet</option></select></label>
+    <label class="full">Message<textarea id="tierMsg" rows="4" placeholder="Tell us about your goals"></textarea></label>
+    <div class="full"><button class="btn green" id="tierBtn" type="submit">Send inquiry</button><p class="thanks">Thanks! (Demo form: nothing was sent.)</p></div>
   </form>
 </div></section>
 </main>
@@ -164,6 +165,6 @@
   </div>
   <p class="legal">&copy; 2026 [Organization name]. A registered nonprofit organization. Design preview by Jeff Cott.</p>
 </div></footer>
-<script src="script.js?v=3"></script>
+<script src="script.js?v=4"></script>
 </body>
 </html>

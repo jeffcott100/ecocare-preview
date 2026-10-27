@@ -103,7 +103,7 @@ footer a{text-decoration:none}footer a:hover{color:#fff}
 .soc svg{width:16px;height:16px}
 .legal{border-top:1px solid rgba(255,255,255,.12);margin-top:44px;padding-top:22px;font-size:13px;color:#8fa086}
 @media(max-width:900px){.split,.frow{grid-template-columns:1fr}.three,.tiers{grid-template-columns:1fr}.nums{grid-template-columns:repeat(2,1fr)}.links{display:none}}
-@media(max-width:640px){.grid,.inq{grid-template-columns:1fr}.hero .credit{bottom:46px;font-size:10.5px}}
+@media(max-width:640px){.grid,.inq{grid-template-columns:1fr}.hero .credit{bottom:34px;font-size:10px}}
 
 /* v2: hover, reveal, deco */
 html{scroll-padding-top:70px}

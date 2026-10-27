@@ -8,3 +8,14 @@ document.getElementById('custom').oninput=()=>{document.querySelectorAll('.amts 
 go.onclick=e=>{e.preventDefault();go.textContent='Demo only: checkout would open here'};
 document.querySelectorAll('form[data-demo]').forEach(f=>f.onsubmit=e=>{e.preventDefault();const t=f.querySelector('.thanks')||f.nextElementSibling;if(t)t.style.display='block';f.querySelectorAll('button[type=submit]').forEach(b=>b.textContent='Thank you!')});
 upd();
+
+/* v2: sticky nav, hero carousel, reveal */
+(()=>{const top=document.querySelector('.top'),hero=document.querySelector('.hero');
+const onS=()=>top.classList.toggle('solid',scrollY>hero.offsetHeight-80);addEventListener('scroll',onS,{passive:true});onS();
+const rm=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const imgs=[...hero.querySelectorAll('.slides img')],cr=document.getElementById('hero-credit');let i=0;
+if(!rm&&imgs.length>1)setInterval(()=>{if(document.hidden)return;imgs[i].classList.remove('on');i=(i+1)%imgs.length;imgs[i].loading='eager';imgs[i].classList.add('on');cr.textContent=imgs[i].dataset.credit},6500);
+const els=document.querySelectorAll('main section:not(.hero) h2, .lede, .pill, .card, .box, .tier, .nums>*, .donate-card, .inq');
+if(rm||!('IntersectionObserver'in window))return;
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const t=e.target;t.classList.add('in');io.unobserve(t);setTimeout(()=>{t.classList.remove('reveal','in');t.style.transitionDelay=''},1200)}}),{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+els.forEach((el,k)=>{el.classList.add('reveal');el.style.transitionDelay=(k%4)*70+'ms';io.observe(el)});})();

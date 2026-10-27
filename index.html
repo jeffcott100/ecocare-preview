@@ -13,7 +13,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;1,9..144,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=1">
+<link rel="stylesheet" href="style.css?v=2">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"Evergreen Commons (placeholder)","description":"Community environmental nonprofit"}</script>
 </head>
 <body>
@@ -31,18 +31,27 @@
 
 <main>
 <section class="hero">
+  <div class="slides">
   <!-- Photo: "Smoke-filtered Sun on the Forest Canopy" by U.S. Forest Service, Public domain, https://commons.wikimedia.org/wiki/File:Smoke-filtered_Sun_on_the_Forest_Canopy_(48047459332).jpg -->
-  <img src="images/hero.webp" width="1920" height="1080" alt="Sunlight filtering through a green forest canopy">
+  <img class="on" src="images/hero.webp" width="1920" height="1080" alt="Sunlight filtering through a green forest canopy" data-credit="Photo: U.S. Forest Service, public domain">
+  <!-- Photo: "Oregon Forest and River" (17151814955) by Bureau of Land Management Oregon and Washington, Public domain, https://commons.wikimedia.org/wiki/File:Oregon_Forest_and_River_(17151814955).jpg -->
+  <img src="images/hero-river.webp" width="1920" height="1280" alt="A clear river winding through an evergreen forest" loading="lazy" data-credit="Photo: Bureau of Land Management, public domain">
+  <!-- Photo: "Wildflowers bloom thickly in the meadow at Tipsoo Lake" by NPS, Public domain, https://commons.wikimedia.org/wiki/File:Wildflowers_bloom_thickly_in_the_meadow_at_Tipsoo_Lake_(1d7ea822-f1ab-3598-b23a-25dec5a42436).JPG -->
+  <img src="images/hero-meadow.webp" width="1920" height="1280" alt="A subalpine meadow full of wildflowers" loading="lazy" data-credit="Photo: National Park Service, public domain">
+  <!-- Photo: "Views at Grand Teton National Park, Wyoming" (0814b200-f289-477f-94c0-5d6e2fa489bd) by NPS staff, Public domain, https://commons.wikimedia.org/wiki/File:Views_at_Grand_Teton_National_Park,_Wyoming_(0814b200-f289-477f-94c0-5d6e2fa489bd).jpg -->
+  <img src="images/hero-mountains.webp" width="1920" height="1280" alt="Mountain peaks rising above forest and meadow" loading="lazy" data-credit="Photo: National Park Service, public domain">
+  </div>
   <div class="wrap hero-text">
     <p class="label">Environmental nonprofit association</p>
     <h1>Protecting the land and water <em>we all share.</em></h1>
     <p class="sub">We restore forests, rivers and wetlands with the help of neighbors, schools and local businesses, so the next generation inherits a healthier place to live.</p>
     <div class="ctas"><a class="btn solid" href="#donate">Donate</a><a class="btn line" href="#sponsor">Become a sponsor</a></div>
   </div>
-  <p class="credit">Photo: U.S. Forest Service, public domain</p>
+  <p class="credit" id="hero-credit">Photo: U.S. Forest Service, public domain</p>
+  <svg class="deco hero-wave" aria-hidden="true" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0 40 C240 10 480 60 720 34 S1200 8 1440 30 V60 H0z" fill="#f8f7f1"/></svg>
 </section>
 
-<section id="mission"><div class="wrap split">
+<section id="mission" class="has-deco"><svg class="deco sprig sway" aria-hidden="true" viewBox="0 0 120 200"><path d="M60 195 C58 140 62 90 60 10" fill="none" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><path d="M60 160c-22-4-34-18-36-34 20 2 33 14 36 34z"/><path d="M60 125c22-4 34-18 36-34-20 2-33 14-36 34z"/><path d="M60 90c-20-4-30-16-32-30 18 2 29 12 32 30z"/><path d="M60 58c18-4 27-14 29-27-16 2-26 11-29 27z"/><path d="M60 30c-10-3-15-10-16-18 9 1 15 7 16 18z"/></g></svg><div class="wrap split">
   <div>
     <p class="label">Our mission</p>
     <h2>Hands-on conservation, rooted in community.</h2>
@@ -55,7 +64,7 @@
   </div>
 </div></section>
 
-<section id="projects" class="alt"><div class="wrap">
+<section id="projects" class="alt has-deco"><svg class="deco topo" aria-hidden="true" viewBox="0 0 400 300" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M20 150c40-80 140-110 220-80s150 60 140 130-120 90-200 70S-10 230 20 150z"/><path d="M60 150c30-55 110-80 170-58s110 45 100 95-90 65-150 50S35 205 60 150z"/><path d="M100 150c22-35 75-50 118-35s75 30 68 62-62 42-105 32S82 185 100 150z"/><path d="M140 150c14-18 42-26 70-18s44 18 40 36-36 24-60 18-58-18-50-36z"/></svg><div class="wrap">
   <p class="label">Our projects</p>
   <h2>Where your support goes</h2>
   <p class="lede">A few of the programs we run year round. (Sample projects for this mockup.)</p>
@@ -95,7 +104,7 @@
   <p class="note">Sample figures for this mockup, to be replaced with your real numbers.</p>
 </div></section>
 
-<section id="involved"><div class="wrap">
+<section id="involved" class="has-deco"><svg class="deco ridge" aria-hidden="true" viewBox="0 0 1440 160" preserveAspectRatio="none"><path d="M0 160 L0 110 L160 60 L280 100 L420 30 L560 95 L700 55 L860 110 L1000 45 L1160 100 L1300 70 L1440 105 L1440 160z" fill="currentColor"/></svg><div class="wrap">
   <p class="label">Get involved</p>
   <h2>There is a place for everyone.</h2>
   <div class="three">
@@ -125,7 +134,7 @@
   </div>
 </div></section>
 
-<section id="sponsor"><div class="wrap">
+<section id="sponsor" class="has-deco"><svg class="deco sprig sprig2" aria-hidden="true" viewBox="0 0 120 200"><path d="M60 195 C58 140 62 90 60 10" fill="none" stroke="currentColor" stroke-width="2"/><g fill="currentColor"><path d="M60 160c-22-4-34-18-36-34 20 2 33 14 36 34z"/><path d="M60 125c22-4 34-18 36-34-20 2-33 14-36 34z"/><path d="M60 90c-20-4-30-16-32-30 18 2 29 12 32 30z"/><path d="M60 58c18-4 27-14 29-27-16 2-26 11-29 27z"/></g></svg><div class="wrap">
   <p class="label">Corporate sponsorship</p>
   <h2>Partner with us for a greener community.</h2>
   <p class="lede">Sponsors fund projects and put their teams to work outdoors. Every tier includes impact reporting you can share with employees and customers. (Sample tiers.)</p>
@@ -155,6 +164,6 @@
   </div>
   <p class="legal">&copy; 2026 [Organization name]. A registered nonprofit organization. Design preview by Jeff Cott.</p>
 </div></footer>
-<script src="script.js?v=1"></script>
+<script src="script.js?v=2"></script>
 </body>
 </html>
